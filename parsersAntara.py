@@ -6,7 +6,7 @@ from datetime import datetime, date
 import time
 from dateutil import parser as dateparser
 
-def parse_antara(start_date=None, end_date=None, max_pages=2, max_articles=50, simpan=False, output_file='antara_lampung.xlsx'):
+def parse_antara(start_date=None, end_date=None, max_pages=2, max_articles=50, simpan=True, output_file='antara_lampung.xlsx'):
     # 1) Pastikan start_date/end_date jadi date objects
     if isinstance(start_date, str):
         start_date = dateparser.parse(start_date).date()

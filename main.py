@@ -28,8 +28,8 @@ def main():
     start_date = input("🗓️ Masukkan tanggal mulai (YYYY-MM-DD): ")
     end_date = input("🗓️ Masukkan tanggal akhir (YYYY-MM-DD): ")
 
-    max_articles = 5
-    max_pages = 1
+    max_articles = 10
+    max_pages = 5
 
     print("\n🚀 Mulai proses scraping...\n")
 
@@ -53,8 +53,8 @@ def main():
             return
 
         # Transform dengan TF-IDF dan prediksi
-        X_tfidf = vectorizer.transform(df_all['isi'])
-        df_all['label'] = model.predict(X_tfidf)
+        df_all['label'] = model.predict(df_all['isi'])
+
 
         # Filter label ekonomi
         df_ekonomi = df_all[df_all['label'] == 1]

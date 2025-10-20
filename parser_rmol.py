@@ -32,7 +32,7 @@ def convert_date(date_str):
         print(f"⚠️ Gagal parsing tanggal '{date_str}': {e}")
         return None
 
-def parse_rmol_lampung(start_date=None, end_date=None, max_articles=10, max_pages=2, simpan=False, output_file="hasil_rmol_lampung.xlsx"):
+def parse_rmol_lampung(start_date=None, end_date=None, max_articles=50, max_pages=2, simpan=False, output_file="hasil_rmol_lampung.xlsx"):
     base_url = "https://www.rmollampung.id/category/daerah?page={}"
     options = Options()
     options.add_argument("--headless")
